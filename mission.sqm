@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1680;
+		nextID=1703;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=266;
+		nextID=306;
 	};
 	class Camera
 	{
-		pos[]={11404.764,332.18146,8031.9873};
-		dir[]={-0.83696073,-0.54692656,0.020243175};
-		up[]={-0.54677892,0.83717316,0.013224144};
-		aside[]={0.024178874,-9.444193e-008,0.99972564};
+		pos[]={11209.872,373.30737,8686.9053};
+		dir[]={0.047376879,-0.64468324,0.76298088};
+		up[]={0.039954316,0.7644496,0.6434443};
+		aside[]={0.99807799,-1.5133992e-009,-0.061975095};
 	};
 };
 binarizationWanted=0;
@@ -35,13 +35,15 @@ addons[]=
 	"A3_Data_F_Curator_Virtual",
 	"A3_Data_F_Exp_A_Virtual",
 	"A3_Ui_F",
-	"rds_A2_Civilians"
+	"rds_A2_Civilians",
+	"A3_Characters_F_Orange",
+	"A3_Air_F_Orange_Heli_Transport_02"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=7;
+		items=9;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -90,6 +92,20 @@ class AddonsMetaData
 			name="RDS Civilian Pack Cars";
 			author="reyhard";
 			url="https://forums.bistudio.com/topic/170165-rds-a2-civilian-pack/";
+		};
+		class Item7
+		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
+			className="A3_Air_F_Orange";
+			name="Arma 3 Orange - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -3186,7 +3202,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=13;
+		items=16;
 		class Item0
 		{
 			dataType="Layer";
@@ -4403,6 +4419,7 @@ class Mission
 							flags=7;
 							class Attributes
 							{
+								init="call{if (isServer) then {this setVariable [""orp_spikeStripAmount"",1,true]};}";
 								description="Anführer";
 								isPlayable=1;
 							};
@@ -6097,6 +6114,7 @@ class Mission
 			};
 			id=1582;
 			type="RDS_Ikarus_Civ_02";
+			atlOffset=-0.020835876;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6137,6 +6155,7 @@ class Mission
 			};
 			id=1583;
 			type="RDS_Ikarus_Civ_01";
+			atlOffset=-0.015853882;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6230,7 +6249,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={10022.258,242.3125,8656.5273};
-			angle=3.594697;
+			angle=3.594696;
 			class Attributes
 			{
 				condition="call{orp_bus2 in thisList && orp_bus1 in thisList}";
@@ -6245,16 +6264,172 @@ class Mission
 			type="EmptyDetector";
 			atlOffset=-13.946167;
 		};
+		class Item13
+		{
+			dataType="Trigger";
+			position[]={11207.553,310.76157,8490.3564};
+			class Attributes
+			{
+				activationBy="GUER";
+				isServerOnly=1;
+			};
+			id=1680;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item14
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14118.855,130.4128,11901.415};
+						angles[]={0,3.6805677,0};
+					};
+					side="Civilian";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=1691;
+					type="C_IDAP_Pilot_01_F";
+					atlOffset=117.988;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14118.855,130.4128,11901.415};
+						angles[]={0,3.6805677,0};
+					};
+					side="Civilian";
+					class Attributes
+					{
+					};
+					id=1692;
+					type="C_IDAP_Pilot_01_F";
+					atlOffset=117.988;
+				};
+				class Item2
+				{
+					dataType="Waypoint";
+					position[]={13589.896,84.206177,11193.604};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=1685;
+					type="Move";
+				};
+				class Item3
+				{
+					dataType="Waypoint";
+					position[]={6839.498,0,3588.1338};
+					expCond="call{true}";
+					expActiv="call{_veh = vehicle this; {deleteVehicle _x} forEach thisList; deleteVehicle _veh;}";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=1686;
+					type="Move";
+					atlOffset=18.176355;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=1691;
+						item1=1690;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1692;
+						item1=1690;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=1681;
+			atlOffset=117.98798;
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14118.749,134.03955,11901.457};
+				angles[]={0,3.6805677,0};
+			};
+			side="Civilian";
+			flags=2;
+			class Attributes
+			{
+			};
+			id=1690;
+			type="C_IDAP_Heli_Transport_02_F";
+			atlOffset=117.98798;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=36;
+			nextID=37;
 		};
 		class Links
 		{
-			items=36;
+			items=37;
 			class Item0
 			{
 				linkID=0;
@@ -6613,6 +6788,16 @@ class Mission
 				class CustomData
 				{
 					type="Sync";
+				};
+			};
+			class Item36
+			{
+				linkID=36;
+				item0=1680;
+				item1=1685;
+				class CustomData
+				{
+					type="WaypointActivation";
 				};
 			};
 		};
