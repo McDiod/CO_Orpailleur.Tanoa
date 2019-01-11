@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=306;
+		nextID=314;
 	};
 	class Camera
 	{
-		pos[]={11209.872,373.30737,8686.9053};
-		dir[]={0.047376879,-0.64468324,0.76298088};
-		up[]={0.039954316,0.7644496,0.6434443};
-		aside[]={0.99807799,-1.5133992e-009,-0.061975095};
+		pos[]={11210.882,380.42819,8660.7041};
+		dir[]={0.19300753,-0.71153468,0.6756283};
+		up[]={0.1954466,0.70265079,0.68416589};
+		aside[]={0.9615376,1.0087388e-007,-0.27468386};
 	};
 };
 binarizationWanted=0;
@@ -5230,6 +5230,7 @@ class Mission
 							flags=7;
 							class Attributes
 							{
+								init="call{if (isServer) then {this setVariable [""orp_spikeStripAmount"",1,true]};}";
 								description="Gruppenführer";
 								isPlayable=1;
 							};
