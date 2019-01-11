@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1679;
+		nextID=1680;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=234;
+		nextID=258;
 	};
 	class Camera
 	{
-		pos[]={11648.468,194.90451,8031.2734};
-		dir[]={-0.79568493,-0.59901655,-0.089929909};
-		up[]={-0.59523493,0.80073017,-0.067275189};
-		aside[]={-0.11230902,-7.8667654e-008,0.9936837};
+		pos[]={11611.445,291.87512,8082.3311};
+		dir[]={-0.91600925,-0.39956197,-0.036130268};
+		up[]={-0.39926532,0.91669935,-0.015748808};
+		aside[]={-0.039413907,1.0061194e-007,0.99923545};
 	};
 };
 binarizationWanted=0;
@@ -6231,17 +6231,21 @@ class Mission
 		class Item12
 		{
 			dataType="Trigger";
-			position[]={11363.95,116.82357,7913.2324};
+			position[]={10022.258,242.3125,8656.5273};
+			angle=3.5946972;
 			class Attributes
 			{
-				condition="call{{_x in orp_bus1 || _x in orp_bus2} count playableUnits == count playableUnits}";
-				onActivation="call{[] execVM ""USER\scripts\teleportBuses.sqf""}";
-				sizeA=0;
-				sizeB=0;
+				condition="call{orp_bus2 in thisList && orp_bus1 in thisList}";
+				onActivation="call{[orp_bus2] execVM ""USER\scripts\teleportBuses.sqf""; [orp_bus1] execVM ""USER\scripts\teleportBuses.sqf"";}";
+				sizeA=1200;
+				sizeB=600;
+				activationBy="ANY";
+				isRectangle=1;
 				isServerOnly=1;
 			};
-			id=1591;
+			id=1679;
 			type="EmptyDetector";
+			atlOffset=-13.946167;
 		};
 	};
 	class Connections

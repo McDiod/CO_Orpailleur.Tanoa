@@ -1,9 +1,7 @@
-diag_log "teleportBuses.sqf";
+params ["_bus"];
 
-private _northCrew = crew orp_bus1;
-private _southCrew = crew orp_bus2;
-private _northPlayers = _northCrew arrayIntersect playableUnits;
-private _southPlayers = _southCrew arrayIntersect playableUnits;
+private _crew = crew _bus;
+private _players = _crew arrayIntersect playableUnits;
 
 private _fnc_teleportBus = {
     params ["_bus","_pos","_dir"];
@@ -11,14 +9,51 @@ private _fnc_teleportBus = {
     _bus setPos _pos;
 };
 
-private _fnc_teleportUnit = {
+private _fnc_cutScene = {
     params ["_unit","_pos","_dir"];
 
-    _unit allowDamage false;
-    _unit setPos _pos;
-    _unit setDir _dir;
-    sleep 3;
-    _unit allowDamage true;
+    private _cam = objNull;
+    if (_unit == player) then {
+        private _bus = vehicle player;
+        private _camStartPos = ASLToAGL eyePos player;
+        _cam = "camera" camCreate _camStartPos;
+        _cam cameraEffect ["internal", "BACK"];
+        showCinemaBorder true;
+        _cam camSetTarget _bus;
+        _cam camSetFOV 0.4;
+        _cam camSetPos [_camStartPos select 0,_camStartPos select 1,(_camStartPos select 2) + 20];
+
+        _cam camCommit 10;
+        sleep 8;
+
+        99998 cutText ["","BLACK OUT",2,true];
+        sleep 3;
+        99999 cutText ["<t size='2.4'>einige Minuten später...</t>","BLACK OUT",2,true,true];
+        sleep 4;
+        99999 cutText ["<t size='2.4'>einige Minuten später...</t>","BLACK IN",2,true,true];
+
+    } else {
+        sleep 15;
+    };
+
+    _this spawn {
+        params ["_unit","_pos","_dir"];
+        _unit allowDamage false;
+        moveOut _unit;
+        _unit setPos _pos;
+        _unit setDir _dir;
+        sleep 3;
+        _unit allowDamage true;
+    };
+
+    if (_unit == player) then {
+        sleep 2;
+        _cam cameraEffect ["terminate", "BACK"];
+        camDestroy _cam;
+        showCinemaBorder false;
+        sleep 3;
+        99998 cutText ["","BLACK IN",2,true];
+    };
 };
 
 private _northPlayerPositions = [
@@ -77,19 +112,20 @@ private _southPlayerPositions = [
     [7548.46,10504.3,0.00408173]
 ];
 
-{moveOut _x} forEach playableUnits;
-
-sleep 1;
-
-[[orp_bus1,[7559.62,10536.6,0],59],_fnc_teleportBus] remoteExec ["call",orp_bus1,false];
-[[orp_bus2,[4604.06,8816.24,2],247],_fnc_teleportBus] remoteExec ["call",orp_bus2,false];
+private _isNorthBus = _bus isEqualTo orp_bus1;
+private _playerDir = [184,39] select _isNorthBus;
+private _playerPosArray = [_southPlayerPositions,_northPlayerPositions] select _isNorthBus;
 
 {
-    _playerPos = _northPlayerPositions param [_forEachIndex,_northPlayerPositions select 0];
-    [[_x,_playerPos,39],_fnc_teleportUnit] remoteExec ["spawn",_x,false];
-} forEach _northPlayers;
+    _playerPos = _playerPosArray param [_forEachIndex,_playerPosArray select 0];
+    [[_x,_playerPos,_playerDir],_fnc_cutScene] remoteExec ["spawn",_x,false];
+} forEach _players;
 
-{
-    _playerPos = _southPlayerPositions param [_forEachIndex,_southPlayerPositions select 0];
-    [[_x,_playerPos,185],_fnc_teleportUnit] remoteExec ["spawn",_x,false];
-} forEach _southPlayers;
+waitUntil {
+    {_x in _bus} count playableUnits == 0
+};
+
+private _busPos = [[4604.06,8816.24,2],[7559.62,10536.6,0]] select _isNorthBus;
+private _busDir = [247,59] select _isNorthBus;
+
+[[_bus,_busPos,_busDir],_fnc_teleportBus] remoteExec ["call",_bus,false];
