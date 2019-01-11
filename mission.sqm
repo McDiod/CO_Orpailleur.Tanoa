@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=258;
+		nextID=266;
 	};
 	class Camera
 	{
-		pos[]={11611.445,291.87512,8082.3311};
-		dir[]={-0.91600925,-0.39956197,-0.036130268};
-		up[]={-0.39926532,0.91669935,-0.015748808};
-		aside[]={-0.039413907,1.0061194e-007,0.99923545};
+		pos[]={11404.764,332.18146,8031.9873};
+		dir[]={-0.83696073,-0.54692656,0.020243175};
+		up[]={-0.54677892,0.83717316,0.013224144};
+		aside[]={0.024178874,-9.444193e-008,0.99972564};
 	};
 };
 binarizationWanted=0;
@@ -6086,8 +6086,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11581.948,131.70181,8024.1006};
-				angles[]={0.018660666,4.4756784,6.2352247};
+				position[]={11757.946,104.8797,8043.8369};
+				angles[]={0.013332055,4.5696797,6.088356};
 			};
 			side="Empty";
 			flags=4;
@@ -6097,7 +6097,6 @@ class Mission
 			};
 			id=1582;
 			type="RDS_Ikarus_Civ_02";
-			atlOffset=-0.0037384033;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6127,8 +6126,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11601.199,129.81088,8026.8652};
-				angles[]={0.023993526,4.611043,6.1611314};
+				position[]={11786.131,98.710625,8051.5503};
+				angles[]={0.050624419,4.4717102,6.0350728};
 			};
 			side="Empty";
 			flags=4;
@@ -6138,7 +6137,6 @@ class Mission
 			};
 			id=1583;
 			type="RDS_Ikarus_Civ_01";
-			atlOffset=-0.018379211;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6232,7 +6230,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={10022.258,242.3125,8656.5273};
-			angle=3.5946972;
+			angle=3.594697;
 			class Attributes
 			{
 				condition="call{orp_bus2 in thisList && orp_bus1 in thisList}";

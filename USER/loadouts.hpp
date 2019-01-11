@@ -20,7 +20,7 @@
 
 loadoutFactionBlu = "";
 loadoutFactionOpf = "";
-loadoutFactionInd = "";
+loadoutFactionInd = "orp_rebels";
 
 // Achtung: grad-factions enthält derzeit keine Loadouts, die für Zivilisten funktionieren
 loadoutFactionCiv = "";
