@@ -8,6 +8,7 @@ class orp {
         file = USER\functions;
 
         class addSpikeStripInteraction {};
+        class attachBriefcase {};
         class placeSpikeStrip {};
     };
 };

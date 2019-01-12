@@ -4,3 +4,4 @@
 */
 
 [] execVM "USER\scripts\addPlayerSpikeStripInteraction.sqf";
+[] execVM "USER\scripts\addUnitsBriefcaseInteractions.sqf";
