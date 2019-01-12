@@ -4,7 +4,7 @@ private _act = ["orp_breakTransporterAction","Geldtransporter aufbrechen","",{
     params ["_veh","_unit"];
 
     if (_veh getVariable ["orp_beingBroken",false]) exitWith {
-        hint "Jemand arbeitet bereits an diesem Fahrzeug.";
+        ["grad_notification1",["BESETZT","Jemand arbeitet bereits an diesem Fahrzeug."]] call BIS_fnc_showNotification;
     };
 
     private _relDir = _veh getRelDir _unit;
@@ -26,6 +26,7 @@ private _act = ["orp_breakTransporterAction","Geldtransporter aufbrechen","",{
         _veh setVariable ["orp_transporterBroken",true,true];
         _veh setVariable ["orp_beingBroken",false,true];
         _veh animateDoor ["Door_4_source",1];
+        {[_x] remoteExec ["doGetOut",_x,false]} forEach crew _veh;
         [_unit,"",false] call orp_fnc_breakInAnim;
     };
     private _fnc_onFailure = {
@@ -33,7 +34,7 @@ private _act = ["orp_breakTransporterAction","Geldtransporter aufbrechen","",{
         deleteVehicle _soundDummy;
         _veh setVariable ["orp_beingBroken",false,true];
         [_unit,"",false] call orp_fnc_breakInAnim;
-        hint "Du hast die Arbeit am Fahrzeug abgebrochen.";
+        ["grad_notification1",["ABGEBROCHEN","Du hast die Arbeit am Fahrzeug abgebrochen."]] call BIS_fnc_showNotification;
     };
 
     [50,[_veh,_unit,_soundDummy],_fnc_onFinish,_fnc_onFailure] call ace_common_fnc_progressBar;
@@ -47,9 +48,9 @@ private _act = ["orp_breakTransporterAction","Geldtransporter aufbrechen","",{
 private _act = ["orp_takeMoneyAction","Geldkoffer nehmen","",{
     params ["_veh","_unit"];
 
-    private _moneyLeft = _veh getVariable ["orp_moneyLeftAmount",0];
+    private _allBriefcases = (attachedObjects _veh) select {typeOf _x == "Land_Suitcase_F"};
 
-    if (_moneyLeft == 0) exitWith {
+    if (count _allBriefcases == 0) exitWith {
         ["grad_notification1",["LEER","Das Fahrzeug ist leer."]] call BIS_fnc_showNotification;
     };
 
@@ -58,9 +59,8 @@ private _act = ["orp_takeMoneyAction","Geldkoffer nehmen","",{
     };
 
     _unit playAction "PutDown";
-    _veh setVariable ["orp_moneyLeftAmount",_moneyLeft - 1,true];
 
-    private _briefcase = "Land_Suitcase_F" createVehicle [0,0,0];
+    private _briefcase = _allBriefcases param [0,objNull];
     [_unit,_briefcase] call orp_fnc_attachBriefcase;
 
 },{(_this select 0) getVariable ["orp_transporterBroken",false]}] call ace_interact_menu_fnc_createAction;
