@@ -4,7 +4,12 @@ private _act = ["orp_breakTransporterAction","Geldtransporter aufbrechen","",{
     params ["_veh","_unit"];
 
     if (_veh getVariable ["orp_beingBroken",false]) exitWith {
-        ["grad_notification1",["FEHLER","Jemand arbeitet bereits an diesem Fahrzeug."]] call BIS_fnc_showNotification;
+        hint "Jemand arbeitet bereits an diesem Fahrzeug.";
+    };
+
+    private _relDir = _veh getRelDir _unit;
+    if !(_relDir > 165.597 && _relDir < 198.354) exitWith {
+        hint "Die Hintertür sieht am leichtesten aufzubrechen aus.";
     };
 
     _veh setVariable ["orp_beingBroken",true,true];
@@ -13,21 +18,25 @@ private _act = ["orp_breakTransporterAction","Geldtransporter aufbrechen","",{
     _soundDummy attachTo [_unit,[0,0,0]];
     [_soundDummy,"orp_burner"] remoteExec ["say3D",0,false];
 
+    [_unit,(configFile >> "ACE_Repair" >> "Actions" >> "FullRepair")] call orp_fnc_breakInAnim;
+
     private _fnc_onFinish = {
         (_this select 0) params ["_veh","_unit","_soundDummy"];
         deleteVehicle _soundDummy;
         _veh setVariable ["orp_transporterBroken",true,true];
         _veh setVariable ["orp_beingBroken",false,true];
         _veh animateDoor ["Door_4_source",1];
+        [_unit,"",false] call orp_fnc_breakInAnim;
     };
     private _fnc_onFailure = {
         (_this select 0) params ["_veh","_unit","_soundDummy"];
         deleteVehicle _soundDummy;
         _veh setVariable ["orp_beingBroken",false,true];
-        ["grad_notification1",["ABGEBROCHEN","Du hast die Arbeit am Fahrzeug abgebrochen."]] call BIS_fnc_showNotification;
+        [_unit,"",false] call orp_fnc_breakInAnim;
+        hint "Du hast die Arbeit am Fahrzeug abgebrochen.";
     };
 
-    [48,[_veh,_unit,_soundDummy],_fnc_onFinish,_fnc_onFailure] call ace_common_fnc_progressBar;
+    [50,[_veh,_unit,_soundDummy],_fnc_onFinish,_fnc_onFailure] call ace_common_fnc_progressBar;
 
 },{!((_this select 0) getVariable ["orp_transporterBroken",false])}] call ace_interact_menu_fnc_createAction;
 
