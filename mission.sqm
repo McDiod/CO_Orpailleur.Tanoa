@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1712;
+		nextID=1737;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=346;
+		nextID=354;
 	};
 	class Camera
 	{
-		pos[]={11313.414,137.18327,8092.3887};
-		dir[]={-0.78947252,-0.50330245,0.3515465};
-		up[]={-0.45982191,0.86407244,0.20475639};
-		aside[]={0.40681836,8.1682811e-007,0.91359448};
+		pos[]={11233.089,6.1940708,5368.0669};
+		dir[]={0.25886837,-0.37478933,0.89037257};
+		up[]={0.10466088,0.92704946,0.35998586};
+		aside[]={0.96036899,-3.6027923e-006,-0.2792168};
 	};
 };
 binarizationWanted=0;
@@ -38,17 +38,18 @@ addons[]=
 	"rds_A2_Civilians",
 	"A3_Characters_F_Orange",
 	"A3_Air_F_Orange_Heli_Transport_02",
-	"A3_Soft_F_Orange_Van_02",
 	"A3_Soft_F_Offroad_01",
 	"A3_Structures_F_Items_Luggage",
+	"A3_Soft_F_Orange_Van_02",
 	"A3_Props_F_Orange_Humanitarian_Supplies",
-	"ace_cargo"
+	"A3_Structures_F_Furniture",
+	"A3_Props_F_Orange_Civilian_InfoBoards"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=14;
+		items=13;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -114,22 +115,22 @@ class AddonsMetaData
 		};
 		class Item9
 		{
-			className="A3_Soft_F_Orange";
-			name="Arma 3 Orange - Unarmored Land Vehicles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item10
-		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item10
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item11
+		{
+			className="A3_Soft_F_Orange";
+			name="Arma 3 Orange - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -139,13 +140,6 @@ class AddonsMetaData
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
-		};
-		class Item13
-		{
-			className="ace_cargo";
-			name="ACE3 - Cargo";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -3242,7 +3236,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=23;
+		items=30;
 		class Item0
 		{
 			dataType="Layer";
@@ -6468,46 +6462,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11299.872,130.11798,8101.4917};
-			};
-			side="Empty";
-			class Attributes
-			{
-				init="call{[this] execVM ""USER\scripts\addTransporterInteraction.sqf""; if (isServer) then {this setVariable [""orp_moneyLeftAmount"",4,true]; this animateDoor [""Door_4_source"",1,true]};}";
-				name="orp_transporter";
-			};
-			id=1703;
-			type="C_Van_02_vehicle_F";
-			atlOffset=0.99999237;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item17
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={11272.808,126.78354,8096.9038};
 				angles[]={6.2431998,6.259728,0.090425514};
 			};
@@ -6543,7 +6497,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item18
+		class Item17
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6558,13 +6512,54 @@ class Mission
 			};
 			id=1705;
 			type="Land_Suitcase_F";
+			atlOffset=-0.00025177002;
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11235.36,3.5961404,5384.561};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				init="call{[this] execVM ""USER\scripts\addTransporterInteraction.sqf""; if (isServer) then {this setVariable [""orp_moneyLeftAmount"",4,true]; this animateDoor [""Door_4_source"",1,true]};}";
+				name="orp_transporter";
+			};
+			id=1712;
+			type="C_Van_02_vehicle_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item19
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11299.318,129.41165,8101.0308};
+				position[]={11232.232,2.9739723,5384.0381};
 				angles[]={0,1.5879878,0};
 			};
 			side="Empty";
@@ -6572,60 +6567,244 @@ class Mission
 			{
 				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
 			};
-			id=1709;
+			id=1713;
 			type="Land_PaperBox_01_small_closed_brown_F";
-			atlOffset=1.8269806;
+			atlOffset=0.82700014;
 		};
 		class Item20
 		{
-			dataType="Object";
-			class PositionInfo
+			dataType="Group";
+			side="West";
+			class Entities
 			{
-				position[]={11299.848,129.41223,8101.0059};
-				angles[]={0,1.577289,0};
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11235.36,1.9414389,5384.6108};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=1718;
+					type="B_Soldier_A_F";
+				};
 			};
-			side="Empty";
 			class Attributes
 			{
-				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
 			};
-			id=1710;
-			type="Land_PaperBox_01_small_closed_brown_F";
-			atlOffset=1.7719803;
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=1718;
+						item1=1712;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
+			};
+			id=1717;
 		};
 		class Item21
 		{
-			dataType="Object";
-			class PositionInfo
+			dataType="Group";
+			side="West";
+			class Entities
 			{
-				position[]={11300.354,129.41132,8101.0049};
-				angles[]={0,1.6128063,0};
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11235.36,1.9414389,5384.6108};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=1720;
+					type="B_Soldier_A_F";
+				};
 			};
-			side="Empty";
 			class Attributes
 			{
-				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
 			};
-			id=1711;
-			type="Land_PaperBox_01_small_closed_brown_F";
-			atlOffset=1.7169876;
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=1720;
+						item1=1712;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+				};
+			};
+			id=1719;
 		};
 		class Item22
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11299.85,129.94522,8102.2681};
-				angles[]={0,3.1532514,0};
+				position[]={11234.662,3.5670002,5385.4102};
+				angles[]={0,4.712389,0};
 			};
 			side="Empty";
 			class Attributes
 			{
 				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
 			};
-			id=1708;
-			type="Land_PaperBox_01_small_stacked_F";
-			atlOffset=1.745018;
+			id=1722;
+			type="Land_Metal_rack_F";
+			atlOffset=0.727;
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11234.658,3.5670002,5384.292};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
+			};
+			id=1723;
+			type="Land_Metal_rack_F";
+			atlOffset=0.727;
+		};
+		class Item24
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11235.368,3.9195235,5386.2129};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
+			};
+			id=1724;
+			type="Land_MapBoard_01_Wall_Tanoa_F";
+			atlOffset=1.428;
+		};
+		class Item25
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11234.684,2.827739,5384.2373};
+				angles[]={0,4.712389,4.712389};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
+			};
+			id=1728;
+			type="Land_Suitcase_F";
+			atlOffset=0.64238644;
+		};
+		class Item26
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11234.675,2.8251853,5385.4438};
+				angles[]={0,4.712389,4.712389};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
+			};
+			id=1730;
+			type="Land_Suitcase_F";
+			atlOffset=0.63983274;
+		};
+		class Item27
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11234.67,3.2841868,5384.2627};
+				angles[]={0,4.712389,4.712389};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
+			};
+			id=1731;
+			type="Land_Suitcase_F";
+			atlOffset=1.0988343;
+		};
+		class Item28
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11234.673,3.2771845,5385.3867};
+				angles[]={0,4.712389,4.712389};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
+			};
+			id=1732;
+			type="Land_Suitcase_F";
+			atlOffset=1.0918319;
+		};
+		class Item29
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11236.086,3.572,5384.1509};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{if (isServer) then {[this,orp_transporter] call BIS_fnc_attachToRelative};}";
+			};
+			id=1736;
+			type="Land_Metal_rack_F";
+			atlOffset=0.73199987;
 		};
 	};
 	class Connections
