@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1883;
+		nextID=1885;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=510;
+		nextID=530;
 	};
 	class Camera
 	{
-		pos[]={6270.7832,53.795639,8830.4111};
-		dir[]={0.74829829,-0.50236243,0.43322608};
-		up[]={0.43475762,0.86465675,0.25170195};
-		aside[]={0.50103718,1.8335413e-008,-0.8654263};
+		pos[]={6267.4814,52.049171,8823.1191};
+		dir[]={0.60968405,-0.23702005,0.75638789};
+		up[]={0.14874806,0.97150242,0.18453933};
+		aside[]={0.77857137,1.1175871e-007,-0.62756485};
 	};
 };
 binarizationWanted=0;
@@ -6539,7 +6539,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
-				init="call{if (isServer) then {[this,true,[""HideDoor3"",1]] call BIS_fnc_initVehicle; }; [this] execVM ""USER\scripts\addDealerVehicleInteractions.sqf""}";
+				init="call{if (isServer) then {[this,true,[""HideDoor3"",1]] call BIS_fnc_initVehicle; [this] execVM ""USER\scripts\addDealerInventory.sqf""}; [this] execVM ""USER\scripts\addDealerVehicleInteractions.sqf""}";
 				name="orp_dealerVeh";
 			};
 			id=1704;
@@ -6562,7 +6562,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
