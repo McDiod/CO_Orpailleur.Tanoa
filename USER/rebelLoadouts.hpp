@@ -33,7 +33,7 @@ class orp_rebels {
 			"U_BG_Guerilla2_2",
 			"U_BG_Guerilla2_1",
 			"U_BG_Guerrilla_6_1"
-		//	"U_BG_Guerilla1_1"	
+		//	"U_BG_Guerilla1_1"
 		};
 		vest[] = {
 			"V_BandollierB_blk",
@@ -59,18 +59,18 @@ class orp_rebels {
 			"G_Bandanna_khk",
 			"G_Bandanna_oli"
 		};
-		
-		primaryWeapon = "";	
+
+		primaryWeapon = "";
         primaryWeaponMagazine = "";
 		primaryWeaponOptics = "";
 		primaryWeaponPointer = LLITEM;
 		primaryWeaponMuzzle = SUPPRESSORITEM;
         primaryWeaponUnderbarrel = "";
 		primaryWeaponUnderbarrelMagazine = "";
-        secondaryWeapon = "rhs_weap_type94_new";
-        secondaryWeaponMagazine = "rhs_mag_6x8mm_mhp";
-		handgunWeapon = "";
-        handgunWeaponMagazine = "";
+        secondaryWeapon = "";
+        secondaryWeaponMagazine = "";
+		handgunWeapon = "rhs_weap_type94_new";
+        handgunWeaponMagazine = "rhs_mag_6x8mm_mhp";
 		binoculars = "Binocular";
 		map = "ItemMap";
 		compass = "ItemCompass";
@@ -82,7 +82,7 @@ class orp_rebels {
     class Type {
         //Rifleman
         class Soldier_F {
-			primaryWeapon = "rhs_weap_kar98k";	
+			primaryWeapon = "rhs_weap_kar98k";
 			primaryWeaponMagazine = "rhsgref_5Rnd_792x57_kar98k";
             addItemsToUniform[] = {
                 LIST_4("ACE_packingBandage"),
@@ -93,7 +93,7 @@ class orp_rebels {
                 LIST_2("ACE_epinephrine")
             };
             addItemsToVest[] = {
-                LIST_3("rhsusf_mag_17Rnd_9x19_JHP"),
+                LIST_3("rhs_mag_6x8mm_mhp"),
                 LIST_4("rhsgref_5Rnd_792x57_kar98k")
             };
         };
@@ -102,9 +102,10 @@ class orp_rebels {
         class soldier_AAR_F: Soldier_F {
             primaryWeapon = "rhs_weap_Izh18";
 			primaryWeaponMagazine = "rhsgref_1Rnd_00Buck";
-                addItemsToVest[] = {
+            addItemsToVest[] = {
 				LIST_3("rhs_mag_6x8mm_mhp"),
-                LIST_40("rhsgref_1Rnd_00Buck")
+                LIST_20("rhsgref_1Rnd_00Buck"),
+                LIST_20("rhsgref_1Rnd_00Buck")
             };
         };
 
@@ -112,7 +113,7 @@ class orp_rebels {
         class soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_scorpion";
             primaryWeaponMagazine = "rhsgref_10rnd_765x17_vz61";
-			
+
             addItemsToVest[] = {
 				LIST_3("rhs_mag_6x8mm_mhp"),
                 LIST_4("rhsgref_10rnd_765x17_vz61")
@@ -121,7 +122,7 @@ class orp_rebels {
 
         //Combat Life Saver
         class medic_F: Soldier_F {
-			
+
 			uniform[] = {
 			"U_BG_Guerilla2_3",
 			"U_BG_Guerilla2_2"
@@ -130,7 +131,7 @@ class orp_rebels {
             backpack = "ga_dlc_low_messenger_olive_medic";
             handgunWeapon = "rhsusf_weap_m1911a1";
 			handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
-            primaryWeapon = "";	
+            primaryWeapon = "";
 			primaryWeaponMagazine = "";
 			addItemsToVest[] = {
                 LIST_6("rhsusf_mag_7x45acp_MHP")
@@ -156,14 +157,14 @@ class orp_rebels {
         class Soldier_TL_F: Soldier_F {
 			headgear = "H_Beret_blk";
 			uniform = "U_BG_Guerrilla_6_1";
-			
-			primaryWeapon = "rhs_weap_m3a1";	
+
+			primaryWeapon = "rhs_weap_m3a1";
 			primaryWeaponMagazine = "rhsgref_30rnd_1143x23_M1911B_SMG";
 			addItemsToVest[] = {
-                LIST_1("rhsusf_mag_17Rnd_9x19_JHP"),
+                LIST_1("rhs_mag_6x8mm_mhp"),
                 LIST_2("rhsgref_30rnd_1143x23_M1911B_SMG")
 			};
-			
+
 
         };
 
@@ -173,13 +174,11 @@ class orp_rebels {
 			vest = "V_Rangemaster_belt";
 			handgunWeapon = "rhsusf_weap_m1911a1";
 			handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
-            primaryWeapon = "";	
+            primaryWeapon = "";
 			primaryWeaponMagazine = "";
 			addItemsToVest[] = {
                 LIST_6("rhsusf_mag_7x45acp_MHP")
 			};
-			
-
         };
     };
 };

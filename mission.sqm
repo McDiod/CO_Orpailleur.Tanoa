@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2024;
+		nextID=2033;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=615;
+		nextID=651;
 	};
 	class Camera
 	{
-		pos[]={11213.263,375.32379,8673.9297};
-		dir[]={0.65266782,-0.59549272,0.46857512};
-		up[]={0.48384652,0.8032639,0.34737167};
-		aside[]={0.58324957,2.249144e-007,-0.81239694};
+		pos[]={11424.995,586.8642,8719.71};
+		dir[]={-0.68236446,-0.62805629,-0.37428215};
+		up[]={-0.55077571,0.77806866,-0.30210379};
+		aside[]={-0.4809548,1.018052e-006,0.87684959};
 	};
 };
 binarizationWanted=0;
@@ -3406,7 +3406,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Template: Spielereinheiten";
-			state=2;
 			class Entities
 			{
 				items=18;
@@ -4719,7 +4718,6 @@ class Mission
 					{
 					};
 					id=1503;
-					atlOffset=60.779999;
 				};
 				class Item13
 				{
@@ -4853,126 +4851,6 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={11220.363,367.36072,8685.084};
-								angles[]={0,6.1285906,0};
-							};
-							side="Independent";
-							flags=5;
-							class Attributes
-							{
-								description="Rebell";
-								isPlayable=1;
-							};
-							id=1544;
-							type="I_soldier_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06GRE";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.94999999;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={11221.299,367.36041,8685.0996};
-								angles[]={0,6.1285906,0};
-							};
-							side="Independent";
-							flags=5;
-							class Attributes
-							{
-								description="Rebell";
-								isPlayable=1;
-							};
-							id=1546;
-							type="I_soldier_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06GRE";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.94999999;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={11222.175,367.42001,8685.2344};
 								angles[]={0,6.1285906,0};
 							};
@@ -5029,12 +4907,132 @@ class Mission
 								nAttributes=2;
 							};
 						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11220.363,367.36111,8685.084};
+								angles[]={0,6.1285839,0};
+							};
+							side="Independent";
+							flags=4;
+							class Attributes
+							{
+								description="Rebell";
+								isPlayable=1;
+							};
+							id=2024;
+							type="I_Soldier_AR_F";
+							atlOffset=0.00039672852;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11221.299,367.36029,8685.0996};
+								angles[]={0,6.1285839,0};
+							};
+							side="Independent";
+							class Attributes
+							{
+								description="Rebell";
+								isPlayable=1;
+							};
+							id=2025;
+							type="I_Soldier_AAR_F";
+							atlOffset=0.3999939;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
 					};
 					class Attributes
 					{
 					};
 					id=1555;
-					atlOffset=60.779999;
 				};
 				class Item14
 				{
@@ -5168,18 +5166,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={11220.783,367.3606,8689.9482};
-								angles[]={0,2.9405026,0};
+								position[]={11219.425,367.36154,8689.5049};
+								angles[]={0,2.9404957,0};
 							};
 							side="Independent";
-							flags=5;
+							flags=4;
 							class Attributes
 							{
 								description="Rebell";
 								isPlayable=1;
 							};
-							id=1551;
-							type="I_soldier_F";
+							id=2026;
+							type="I_Soldier_AR_F";
+							atlOffset=0.00048828125;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5228,18 +5227,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={11219.425,367.36105,8689.5049};
-								angles[]={0,2.9405026,0};
+								position[]={11220.783,367.36084,8689.9482};
+								angles[]={0,2.9404957,0};
 							};
 							side="Independent";
-							flags=5;
+							flags=4;
 							class Attributes
 							{
 								description="Rebell";
 								isPlayable=1;
 							};
-							id=1552;
-							type="I_soldier_F";
+							id=2027;
+							type="I_Soldier_AAR_F";
+							atlOffset=0.00024414063;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5288,18 +5288,18 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={11218.319,367.36142,8689.5371};
-								angles[]={0,2.9405026,0};
+								position[]={11218.32,367.3609,8689.5371};
+								angles[]={0,2.9404957,0};
 							};
 							side="Independent";
-							flags=5;
 							class Attributes
 							{
 								description="Rebell";
 								isPlayable=1;
 							};
-							id=1553;
-							type="I_soldier_F";
+							id=2028;
+							type="I_Soldier_AR_F";
+							atlOffset=0.79699707;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5348,7 +5348,6 @@ class Mission
 					{
 					};
 					id=1561;
-					atlOffset=60.779999;
 				};
 				class Item15
 				{
@@ -5542,7 +5541,6 @@ class Mission
 					{
 					};
 					id=1565;
-					atlOffset=60.779999;
 				};
 				class Item16
 				{
@@ -5675,124 +5673,6 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={11233.731,367.31445,8667.123};
-							};
-							side="Independent";
-							flags=5;
-							class Attributes
-							{
-								description="Rebell";
-								isPlayable=1;
-							};
-							id=1572;
-							type="I_soldier_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06GRE";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.94999999;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={11234.604,367.31445,8666.959};
-							};
-							side="Independent";
-							flags=5;
-							class Attributes
-							{
-								description="Rebell";
-								isPlayable=1;
-							};
-							id=1573;
-							type="I_soldier_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06GRE";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.94999999;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={11236.847,367.31445,8666.625};
 							};
 							side="Independent";
@@ -5847,12 +5727,129 @@ class Mission
 								nAttributes=2;
 							};
 						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11234.604,367.31412,8666.959};
+							};
+							side="Independent";
+							class Attributes
+							{
+								description="Rebell";
+								isPlayable=1;
+							};
+							id=2029;
+							type="I_Soldier_AR_F";
+							atlOffset=0.52999878;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11233.731,367.31409,8667.123};
+							};
+							side="Independent";
+							class Attributes
+							{
+								description="Rebell";
+								isPlayable=1;
+							};
+							id=2030;
+							type="I_Soldier_AR_F";
+							atlOffset=0.5039978;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
 					};
 					class Attributes
 					{
 					};
 					id=1569;
-					atlOffset=60.779999;
 				};
 				class Item17
 				{
@@ -5986,126 +5983,6 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={11228.884,367.31445,8665.7666};
-								angles[]={0,1.8958472,0};
-							};
-							side="Independent";
-							flags=5;
-							class Attributes
-							{
-								description="Rebell";
-								isPlayable=1;
-							};
-							id=1578;
-							type="I_soldier_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06GRE";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.94999999;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={11232.1,367.31445,8665.4746};
-								angles[]={0,2.8636265,0};
-							};
-							side="Independent";
-							flags=5;
-							class Attributes
-							{
-								description="Rebell";
-								isPlayable=1;
-							};
-							id=1579;
-							type="I_soldier_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06GRE";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.94999999;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={11233.197,367.31445,8665.627};
 								angles[]={0,2.7379332,0};
 							};
@@ -6161,16 +6038,136 @@ class Mission
 								nAttributes=2;
 							};
 						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11228.884,367.31448,8665.7666};
+								angles[]={0,1.8958465,0};
+							};
+							side="Independent";
+							flags=4;
+							class Attributes
+							{
+								description="Rebell";
+								isPlayable=1;
+							};
+							id=2031;
+							type="I_Soldier_AR_F";
+							atlOffset=3.0517578e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11232.1,367.31424,8665.4746};
+								angles[]={0,2.8636315,0};
+							};
+							side="Independent";
+							class Attributes
+							{
+								description="Rebell";
+								isPlayable=1;
+							};
+							id=2032;
+							type="I_Soldier_AAR_F";
+							atlOffset=0.81604004;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
 					};
 					class Attributes
 					{
 					};
 					id=1575;
-					atlOffset=60.779999;
 				};
 			};
 			id=729;
-			atlOffset=62.59;
+			atlOffset=-4.8013306;
 		};
 		class Item2
 		{
@@ -9279,7 +9276,7 @@ class Mission
 			class Item13
 			{
 				linkID=13;
-				item0=1544;
+				item0=2024;
 				item1=178;
 				class CustomData
 				{
@@ -9289,7 +9286,7 @@ class Mission
 			class Item14
 			{
 				linkID=14;
-				item0=1546;
+				item0=2025;
 				item1=178;
 				class CustomData
 				{
@@ -9329,7 +9326,7 @@ class Mission
 			class Item18
 			{
 				linkID=18;
-				item0=1551;
+				item0=2027;
 				item1=178;
 				class CustomData
 				{
@@ -9339,7 +9336,7 @@ class Mission
 			class Item19
 			{
 				linkID=19;
-				item0=1552;
+				item0=2026;
 				item1=178;
 				class CustomData
 				{
@@ -9349,7 +9346,7 @@ class Mission
 			class Item20
 			{
 				linkID=20;
-				item0=1553;
+				item0=2028;
 				item1=178;
 				class CustomData
 				{
@@ -9409,7 +9406,7 @@ class Mission
 			class Item26
 			{
 				linkID=26;
-				item0=1572;
+				item0=2030;
 				item1=178;
 				class CustomData
 				{
@@ -9419,7 +9416,7 @@ class Mission
 			class Item27
 			{
 				linkID=27;
-				item0=1573;
+				item0=2029;
 				item1=178;
 				class CustomData
 				{
@@ -9459,7 +9456,7 @@ class Mission
 			class Item31
 			{
 				linkID=31;
-				item0=1578;
+				item0=2031;
 				item1=178;
 				class CustomData
 				{
@@ -9469,7 +9466,7 @@ class Mission
 			class Item32
 			{
 				linkID=32;
-				item0=1579;
+				item0=2032;
 				item1=178;
 				class CustomData
 				{
