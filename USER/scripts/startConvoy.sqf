@@ -15,7 +15,11 @@ private _convoy = [_convoySouth,_convoyNorth] select _isNorth;
 for [{_i=0},{_i<count _convoy},{_i=_i+1}] do {
     [{
         params ["_vehicles","_handle"];
-        _vehicles params ["_leader","_thisVeh","_follower"];
+        _vehicles params ["_leader","_thisVeh","_follower","_vehicle1"];
+
+        if (isNull (driver _vehicle1) && {speed _thisVeh < 1}) exitWith {
+            [_handle] call CBA_fnc_removePerFrameHandler;
+        };
 
         private _distFront = _thisVeh distance _leader;
         private _distBack = _thisVeh distance _follower;
@@ -38,5 +42,5 @@ for [{_i=0},{_i<count _convoy},{_i=_i+1}] do {
             };
         };
 
-    },0.5,[_convoy param [_i-1,objNull],_convoy select _i,_convoy param [_i+1,objNull]]] call CBA_fnc_addPerFrameHandler;
+    },0.5,[_convoy param [_i-1,objNull],_convoy select _i,_convoy param [_i+1,objNull]],_convoy select 0] call CBA_fnc_addPerFrameHandler;
 };
