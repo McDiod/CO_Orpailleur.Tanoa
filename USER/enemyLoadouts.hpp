@@ -52,7 +52,7 @@ class securite {
 		nvgoggles = NVITEM;
     };
     class Type {
-        
+
         class Survivor_F {
             addItemsToUniform[] = {
                 LIST_4("ACE_packingBandage"),
@@ -63,6 +63,7 @@ class securite {
                 LIST_2("ACE_epinephrine")
             };
         };
+
 		//POLIZEI ANFANG
 		class Soldier_F: Survivor_F {
 			primaryWeapon = "arifle_AKS_F";
@@ -77,15 +78,15 @@ class securite {
 			addItemsToVest[] = {
                 LIST_4("16Rnd_9x21_Mag")
             };
-		}
+		};
 
         class Soldier_TL_F: Soldier_F {
             primaryWeapon = "";
 			primaryWeaponMagazine = "";
 			headgear = "H_MilCap_gen_F";
         };
-		
-		class Soldier_TL_F: Soldier_F {
+
+		class Soldier_SL_F: Soldier_F {
 			primaryWeapon = "rhs_weap_ak105_zenitco01";
 			primaryWeaponOptics = "rhs_acc_ekp8_02";
 			primaryWeaponMagazine = "rhs_30Rnd_545x39_7N10_AK";
@@ -93,37 +94,38 @@ class securite {
 			vest = "V_PlateCarrier2_blk";
 			goggles = "G_Balaclava_TI_G_blk_F";
 			headgear = "rhssaf_helmet_m97_black_nocamo";
-			
 			addItemsToVest[] = {
                 LIST_6("rhs_30Rnd_545x39_7N10_AK")
             };
         };
 		// POLIZEI ENDE
-		
+
 		//SECURITE ANFANG
-		
+
 		class Soldier_unarmed_F: Survivor_F {
 			addItemsToVest[] = {
                 LIST_4("6Rnd_45ACP_Cylinder")
-		}:
-		
+            };
+		};
+
 		class Soldier_lite_F: Soldier_unarmed_F {
 			primaryWeapon = "rhs_weap_vhsd2";
 			primaryWeaponOptics = "rhsusf_acc_T1_high";
 			primaryWeaponMagazine = "rhsgref_30rnd_556x45_vhs2";
 			addItemsToVest[] = {
                 LIST_6("rhsgref_30rnd_556x45_vhs2")
-		}:
-		
+            };
+		};
+
 		//SECURITE ENDE
-		
+
 		// MILITÄR ANFANG
-		
-		
+
+
 		class HeavyGunner_F: Survivor_F {
 			primaryWeapon = "rhs_weap_ak105_zenitco01_b33";
 			primaryWeaponMagazine = "rhs_30Rnd_545x39_7N10_AK";
-			primaryWeaponOptics = "hlc_optic_HensoldtZO_Lo"
+			primaryWeaponOptics = "hlc_optic_HensoldtZO_Lo";
 			uniform = "U_B_T_Soldier_AR_F";
 			vest = "V_PlateCarrierIAGL_oli";
 			backpack = "";
@@ -137,8 +139,6 @@ class securite {
 				LIST_2("HandGrenade"),
 				LIST_1 ("SmokeShell")
             };
-		}
-		
-		
+		};
     };
 };

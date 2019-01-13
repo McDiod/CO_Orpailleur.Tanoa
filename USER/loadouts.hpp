@@ -18,7 +18,7 @@
 */
 
 
-loadoutFactionBlu = "";
+loadoutFactionBlu = "securite";
 loadoutFactionOpf = "";
 loadoutFactionInd = "orp_rebels";
 
