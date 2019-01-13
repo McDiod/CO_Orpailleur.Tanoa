@@ -10,6 +10,7 @@ class orp {
         class addSpikeStripInteraction {};
         class attachBriefcase {};
         class breakInAnim {};
+        class createGastankFires {};
         class placeSpikeStrip {};
     };
 };

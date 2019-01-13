@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1879;
+		nextID=1883;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=470;
+		nextID=480;
 	};
 	class Camera
 	{
-		pos[]={6269.7852,56.527313,8821.9717};
-		dir[]={0.27517059,-0.21570671,0.93689698};
-		up[]={0.060789224,0.97645849,0.20697427};
-		aside[]={0.95948696,1.0011718e-008,-0.28180513};
+		pos[]={7344.2969,35.214539,8443.8887};
+		dir[]={0.38172653,-0.35450572,0.85360551};
+		up[]={0.14472969,0.93504608,0.3236388};
+		aside[]={0.91289192,-2.2759195e-008,-0.40823808};
 	};
 };
 binarizationWanted=0;
@@ -54,13 +54,14 @@ addons[]=
 	"A3_Weapons_F",
 	"A3_Characters_F_Orange_Facewear",
 	"ace_goggles",
-	"A3_Characters_F_Orange_Vests"
+	"A3_Characters_F_Orange_Vests",
+	"A3_Modules_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=20;
+		items=21;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -200,6 +201,13 @@ class AddonsMetaData
 			name="ACE3 - Goggles";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
+		};
+		class Item20
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -3296,7 +3304,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=32;
+		items=36;
 		class Item0
 		{
 			dataType="Layer";
@@ -3606,6 +3614,46 @@ class Mission
 					id=29;
 					type="VirtualCurator_F";
 					atlOffset=22.855301;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TFAR_freq_lr";
+							expression="if !(_value isEqualTo []) then {_value=[str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput;_this setVariable ['TFAR_freq_lr',_value,true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="TFAR_freq_sr";
+							expression="if !(_value isEqualTo []) then {_value=[str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput;_this setVariable ['TFAR_freq_sr',_value,true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item3
 				{
@@ -3619,7 +3667,46 @@ class Mission
 					id=30;
 					type="VirtualCurator_F";
 					atlOffset=16.917091;
-
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TFAR_freq_lr";
+							expression="if !(_value isEqualTo []) then {_value=[str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput;_this setVariable ['TFAR_freq_lr',_value,true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="TFAR_freq_sr";
+							expression="if !(_value isEqualTo []) then {_value=[str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput;_this setVariable ['TFAR_freq_sr',_value,true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item4
 				{
@@ -3633,6 +3720,46 @@ class Mission
 					id=31;
 					type="VirtualCurator_F";
 					atlOffset=30.78154;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TFAR_freq_lr";
+							expression="if !(_value isEqualTo []) then {_value=[str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput;_this setVariable ['TFAR_freq_lr',_value,true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="TFAR_freq_sr";
+							expression="if !(_value isEqualTo []) then {_value=[str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput;_this setVariable ['TFAR_freq_sr',_value,true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item5
 				{
@@ -8325,6 +8452,54 @@ class Mission
 			};
 			id=1877;
 			atlOffset=0.26099777;
+		};
+		class Item32
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7347.1558,9.158,8522.3682};
+			};
+			init="call{if (isServer) then {[this] execVM ""USER\scripts\gasTankEH.sqf""};}";
+			id=1879;
+			type="Logic";
+			atlOffset=1.6680002;
+		};
+		class Item33
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7365.2998,9.8699999,8542.8203};
+			};
+			init="call{if (isServer) then {[this] execVM ""USER\scripts\gasTankEH.sqf""};}";
+			id=1880;
+			type="Logic";
+			atlOffset=2.3800001;
+		};
+		class Item34
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7390.394,9.3879995,8519.4072};
+			};
+			init="call{if (isServer) then {[this] execVM ""USER\scripts\gasTankEH.sqf""};}";
+			id=1881;
+			type="Logic";
+			atlOffset=1.8979998;
+		};
+		class Item35
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7368.834,9.677,8499.791};
+			};
+			init="call{if (isServer) then {[this] execVM ""USER\scripts\gasTankEH.sqf""};}";
+			id=1882;
+			type="Logic";
+			atlOffset=2.1870003;
 		};
 	};
 	class Connections
