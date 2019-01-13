@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=555;
+		nextID=567;
 	};
 	class Camera
 	{
-		pos[]={11214.36,371.02988,8676.1973};
-		dir[]={0.80199677,-0.1173045,-0.5857681};
-		up[]={0.094753608,0.99308926,-0.069208138};
-		aside[]={-0.58984202,-8.9721289e-007,-0.80756748};
+		pos[]={6281.3105,51.062199,8832.3594};
+		dir[]={0.011942662,-0.51637036,0.85629392};
+		up[]={0.0072010872,0.85636377,0.51632398};
+		aside[]={0.99991202,-1.3943099e-007,-0.01394572};
 	};
 };
 binarizationWanted=0;
@@ -8111,11 +8111,11 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{if (isServer) then {[this,orp_dealerVeh] call BIS_fnc_attachToRelative};}";
+						init="call{if (isServer) then {[this,orp_dealerVeh] call BIS_fnc_attachToRelative; [this, -1] call ace_cargo_fnc_setSize; [this,false] call ace_dragging_fnc_setDraggable; [this, false] call ace_dragging_fnc_setCarryable;};}";
 					};
 					id=1871;
 					type="rhs_3Ya40_1_single";
-					atlOffset=0.12191391;
+					atlOffset=0.12189484;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8151,7 +8151,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{if (isServer) then {[this,orp_dealerVeh] call BIS_fnc_attachToRelative};}";
+						init="call{if (isServer) then {[this,orp_dealerVeh] call BIS_fnc_attachToRelative; [this, -1] call ace_cargo_fnc_setSize; [this,false] call ace_dragging_fnc_setDraggable; [this, false] call ace_dragging_fnc_setCarryable;};}";
 					};
 					id=1868;
 					type="rhs_7ya37_1_single";
@@ -8185,17 +8185,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6281.0381,48.37225,8836.126};
+						position[]={6281.0386,48.372257,8836.126};
 						angles[]={0,3.1036842,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="call{if (isServer) then {[this,orp_dealerVeh] call BIS_fnc_attachToRelative};}";
+						init="call{if (isServer) then {[this,orp_dealerVeh] call BIS_fnc_attachToRelative; [this, -1] call ace_cargo_fnc_setSize; [this,false] call ace_dragging_fnc_setDraggable; [this, false] call ace_dragging_fnc_setCarryable;};}";
 					};
 					id=1869;
 					type="rhs_7ya37_1_single";
-					atlOffset=1.2239876;
+					atlOffset=1.2239952;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8225,17 +8225,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6280.8447,48.476234,8836.8447};
+						position[]={6280.8447,48.476254,8836.8447};
 						angles[]={0,1.5391359,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="call{if (isServer) then {[this,orp_dealerVeh] call BIS_fnc_attachToRelative};}";
+						init="call{if (isServer) then {[this,orp_dealerVeh] call BIS_fnc_attachToRelative; [this, -1] call ace_cargo_fnc_setSize; [this,false] call ace_dragging_fnc_setDraggable; [this, false] call ace_dragging_fnc_setCarryable;};}";
 					};
 					id=1870;
 					type="Box_Syndicate_Ammo_F";
-					atlOffset=1.2479782;
+					atlOffset=1.2479973;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8412,7 +8412,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{if (isServer) then {[this,orp_dealerVeh] call BIS_fnc_attachToRelative};}";
+						init="call{if (isServer) then {[this,orp_dealerVeh] call BIS_fnc_attachToRelative; [this, -1] call ace_cargo_fnc_setSize; [this,false] call ace_dragging_fnc_setDraggable; [this, false] call ace_dragging_fnc_setCarryable;};}";
 					};
 					id=1872;
 					type="Box_Syndicate_WpsLaunch_F";
@@ -8443,7 +8443,7 @@ class Mission
 				};
 			};
 			id=1921;
-			atlOffset=0.88778687;
+			atlOffset=0.88779068;
 		};
 		class Item27
 		{
