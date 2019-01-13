@@ -32,7 +32,7 @@ private _act = ["orp_takeWeaponAction","Ausrüstung nehmen","",{
 
     private _vestItems = vestItems _unit;
     removeVest _unit;
-    _unit addVest "rhssaf_vest_md99_woodland_rifleman";
+    _unit addVest "V_I_G_resistanceLeader_F";
     for "_i" from 0 to 6 do {_unit addItemToVest "rhssaf_30Rnd_762x39mm_M67"};
     {
         if (_unit canAddItemToVest _x) then {
