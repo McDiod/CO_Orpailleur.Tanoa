@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=480;
+		nextID=510;
 	};
 	class Camera
 	{
-		pos[]={11271.657,433.36688,8474.4502};
-		dir[]={-0.22624463,-0.38248596,0.89583772};
-		up[]={-0.093656868,0.92396176,0.37084356};
-		aside[]={0.96955997,4.8603397e-008,0.24486344};
+		pos[]={6270.7832,53.795639,8830.4111};
+		dir[]={0.74829829,-0.50236243,0.43322608};
+		up[]={0.43475762,0.86465675,0.25170195};
+		aside[]={0.50103718,1.8335413e-008,-0.8654263};
 	};
 };
 binarizationWanted=0;
@@ -6539,7 +6539,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
-				init="call{if (isServer) then {[this,true,[""HideDoor3"",1]] call BIS_fnc_initVehicle; }; [this] execVM ""USER\scripts\addDealerVehicleGiveInteraction.sqf""}";
+				init="call{if (isServer) then {[this,true,[""HideDoor3"",1]] call BIS_fnc_initVehicle; }; [this] execVM ""USER\scripts\addDealerVehicleInteractions.sqf""}";
 				name="orp_dealerVeh";
 			};
 			id=1704;
@@ -6818,8 +6818,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5457.7319,6.0254383,9876.9727};
-								angles[]={0,4.7117929,0};
+								position[]={5457.7192,6.0244384,9877.0303};
+								angles[]={0,4.7117958,0};
 							};
 							side="West";
 							flags=3;
@@ -6829,15 +6829,15 @@ class Mission
 							};
 							id=1830;
 							type="B_Soldier_F";
-							atlOffset=0.42399979;
+							atlOffset=0.42299986;
 						};
 						class Item1
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5457.7319,6.0254383,9876.9727};
-								angles[]={0,4.7117929,0};
+								position[]={5457.7192,6.0244384,9877.0303};
+								angles[]={0,4.7117958,0};
 							};
 							side="West";
 							flags=1;
@@ -6846,15 +6846,15 @@ class Mission
 							};
 							id=1831;
 							type="B_Soldier_A_F";
-							atlOffset=0.42399979;
+							atlOffset=0.42299986;
 						};
 						class Item2
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5457.7319,6.0254383,9876.9727};
-								angles[]={0,4.7117929,0};
+								position[]={5457.7192,6.0244384,9877.0303};
+								angles[]={0,4.7117958,0};
 							};
 							side="West";
 							flags=1;
@@ -6863,7 +6863,7 @@ class Mission
 							};
 							id=1832;
 							type="B_Soldier_A_F";
-							atlOffset=0.42399979;
+							atlOffset=0.42299986;
 						};
 					};
 					class Attributes
@@ -6913,27 +6913,27 @@ class Mission
 						};
 					};
 					id=1829;
-					atlOffset=0.42295408;
+					atlOffset=0.42299986;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5457.7188,7.6790943,9876.9805};
-						angles[]={0,4.7117929,0};
+						position[]={5457.7192,7.6791401,9876.9805};
+						angles[]={0,4.7117958,0};
 					};
 					side="West";
 					flags=2;
 					class Attributes
 					{
-						lock="LOCKEDPLAYER";
-						init="call{[this] execVM ""USER\scripts\addTransporterInteraction.sqf""; if (isServer) then {this setObjectTextureGlobal [0, ""USER\data\van_body_security_CO_v3.paa""];};}";
+						lock="LOCKED";
+						init="call{[this] execVM ""USER\scripts\addTransporterInteraction.sqf"";}";
 						name="orp_transporter_fake";
 					};
 					id=1833;
 					type="C_Van_02_vehicle_F";
-					atlOffset=0.42295408;
+					atlOffset=0.42299986;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6970,8 +6970,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5431.5229,5.601439,9877.9326};
-								angles[]={0,4.7669983,0};
+								position[]={5431.481,5.5994387,9877.9912};
+								angles[]={0,4.7670002,0};
 							};
 							side="West";
 							flags=7;
@@ -6981,15 +6981,15 @@ class Mission
 							};
 							id=1843;
 							type="B_Soldier_F";
-							atlOffset=4.7683716e-007;
+							atlOffset=-0.001999855;
 						};
 						class Item1
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5431.5229,5.601439,9877.9326};
-								angles[]={0,4.7669983,0};
+								position[]={5431.481,5.5994387,9877.9912};
+								angles[]={0,4.7670002,0};
 							};
 							side="West";
 							flags=5;
@@ -6998,15 +6998,15 @@ class Mission
 							};
 							id=1844;
 							type="B_Soldier_F";
-							atlOffset=4.7683716e-007;
+							atlOffset=-0.001999855;
 						};
 						class Item2
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5431.5229,5.601439,9877.9326};
-								angles[]={0,4.7669983,0};
+								position[]={5431.481,5.5994387,9877.9912};
+								angles[]={0,4.7670002,0};
 							};
 							side="West";
 							flags=5;
@@ -7015,15 +7015,15 @@ class Mission
 							};
 							id=1845;
 							type="B_Soldier_F";
-							atlOffset=4.7683716e-007;
+							atlOffset=-0.001999855;
 						};
 						class Item3
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5431.5229,5.601439,9877.9326};
-								angles[]={0,4.7669983,0};
+								position[]={5431.481,5.5994387,9877.9912};
+								angles[]={0,4.7670002,0};
 							};
 							side="West";
 							flags=5;
@@ -7032,7 +7032,7 @@ class Mission
 							};
 							id=1846;
 							type="B_Soldier_F";
-							atlOffset=4.7683716e-007;
+							atlOffset=-0.001999855;
 						};
 					};
 					class Attributes
@@ -7093,27 +7093,26 @@ class Mission
 						};
 					};
 					id=1842;
-					atlOffset=-0.0016484261;
+					atlOffset=-0.001999855;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5431.481,7.1679478,9877.9414};
-						angles[]={0,4.7669983,0};
+						position[]={5431.481,7.1675963,9877.9414};
+						angles[]={0,4.7670002,0};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
 						lock="LOCKEDPLAYER";
-						init="call{if (isServer) then {this setObjectTextureGlobal [0, ""USER\data\offroad_02_ext_security_co_v1.paa""];};}";
 						name="orp_convoySouthVeh2";
 					};
 					id=1847;
 					type="C_Offroad_02_unarmed_F";
-					atlOffset=-0.0016484261;
+					atlOffset=-0.001999855;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7405,7 +7404,7 @@ class Mission
 				};
 			};
 			id=1860;
-			atlOffset=0.011786461;
+			atlOffset=0.011770725;
 		};
 		class Item23
 		{
@@ -7425,8 +7424,8 @@ class Mission
 					flags=2;
 					class Attributes
 					{
-						lock="LOCKEDPLAYER";
-						init="call{[this] execVM ""USER\scripts\addTransporterInteraction.sqf""; if (isServer) then {this setObjectTextureGlobal [0, ""USER\data\van_body_security_CO_v3.paa""];};}";
+						lock="LOCKED";
+						init="call{[this] execVM ""USER\scripts\addTransporterInteraction.sqf"";}";
 						name="orp_transporter";
 					};
 					id=1712;
@@ -7604,7 +7603,6 @@ class Mission
 					class Attributes
 					{
 						lock="LOCKEDPLAYER";
-						init="call{if (isServer) then {this setObjectTextureGlobal [0, ""USER\data\offroad_02_ext_security_co_v1.paa""];};}";
 						name="orp_convoyNorthVeh2";
 					};
 					id=1739;

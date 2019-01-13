@@ -26,6 +26,7 @@ private _act = ["orp_breakTransporterAction","Geldtransporter aufbrechen","",{
         _veh setVariable ["orp_transporterBroken",true,true];
         _veh setVariable ["orp_beingBroken",false,true];
         _veh animateDoor ["Door_4_source",1];
+        _veh lock 3;
         {[_x] remoteExec ["doGetOut",_x,false]} forEach crew _veh;
         [_unit,"",false] call orp_fnc_breakInAnim;
     };
