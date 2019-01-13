@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=2;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1924;
+		nextID=2024;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=567;
+		nextID=615;
 	};
 	class Camera
 	{
-		pos[]={6281.3105,51.062199,8832.3594};
-		dir[]={0.011942662,-0.51637036,0.85629392};
-		up[]={0.0072010872,0.85636377,0.51632398};
-		aside[]={0.99991202,-1.3943099e-007,-0.01394572};
+		pos[]={11213.263,375.32379,8673.9297};
+		dir[]={0.65266782,-0.59549272,0.46857512};
+		up[]={0.48384652,0.8032639,0.34737167};
+		aside[]={0.58324957,2.249144e-007,-0.81239694};
 	};
 };
 binarizationWanted=0;
@@ -3333,7 +3333,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=29;
+		items=32;
 		class Item0
 		{
 			dataType="Layer";
@@ -3406,6 +3406,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="Template: Spielereinheiten";
+			state=2;
 			class Entities
 			{
 				items=18;
@@ -4718,6 +4719,7 @@ class Mission
 					{
 					};
 					id=1503;
+					atlOffset=60.779999;
 				};
 				class Item13
 				{
@@ -5032,6 +5034,7 @@ class Mission
 					{
 					};
 					id=1555;
+					atlOffset=60.779999;
 				};
 				class Item14
 				{
@@ -5345,6 +5348,7 @@ class Mission
 					{
 					};
 					id=1561;
+					atlOffset=60.779999;
 				};
 				class Item15
 				{
@@ -5538,6 +5542,7 @@ class Mission
 					{
 					};
 					id=1565;
+					atlOffset=60.779999;
 				};
 				class Item16
 				{
@@ -5847,6 +5852,7 @@ class Mission
 					{
 					};
 					id=1569;
+					atlOffset=60.779999;
 				};
 				class Item17
 				{
@@ -6160,10 +6166,11 @@ class Mission
 					{
 					};
 					id=1575;
+					atlOffset=60.779999;
 				};
 			};
 			id=729;
-			atlOffset=-4.8013306;
+			atlOffset=62.59;
 		};
 		class Item2
 		{
@@ -8550,7 +8557,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11225.342,367.44455,8680.8818};
+						position[]={11225.312,367.42917,8680.5146};
 						angles[]={6.2458739,0,0.055938412};
 					};
 					side="Empty";
@@ -8560,24 +8567,24 @@ class Mission
 					};
 					id=1885;
 					type="Campfire_burning_F";
-					atlOffset=-3.0517578e-005;
+					atlOffset=6.1035156e-005;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11226.915,367.82874,8681.6836};
-						angles[]={0.013327583,0.93317461,0.055938412};
+						position[]={11226.915,367.8288,8681.6836};
+						angles[]={0.013334315,0.93317515,0.055937801};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
+						name="orp_chair2";
 					};
 					id=1886;
 					type="Land_CampingChair_V2_F";
-					atlOffset=-6.1035156e-005;
 				};
 				class Item2
 				{
@@ -8585,12 +8592,13 @@ class Mission
 					class PositionInfo
 					{
 						position[]={11225.491,367.73712,8682.5762};
-						angles[]={0.013327583,0.32728708,0.055938412};
+						angles[]={0.013334315,0.32728416,0.055937801};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
+						name="orp_chair1";
 					};
 					id=1887;
 					type="Land_CampingChair_V2_F";
@@ -9088,6 +9096,45 @@ class Mission
 			};
 			id=1923;
 			atlOffset=0.15115356;
+		};
+		class Item29
+		{
+			dataType="Trigger";
+			position[]={7282.5,9.7441282,8494.8086};
+			class Attributes
+			{
+				condition="call{CBA_missionTime > 30 && {{alive _x} count (missionNamespace getVariable [""orp_gasTanks"",[]]) < 3}}";
+				onActivation="call{[] execVM ""USER\scripts\endingCutScene.sqf""}";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={1,1,1};
+				isServerOnly=1;
+			};
+			id=1924;
+			type="EmptyDetector";
+		};
+		class Item30
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7399.896,7.4899998,8494.1758};
+			};
+			name="orp_camTargetEnd1";
+			id=1925;
+			type="Logic";
+		};
+		class Item31
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11224.166,368.63107,8678.8252};
+			};
+			name="orp_camTargetEnd2";
+			id=2023;
+			type="Logic";
+			atlOffset=1.5589905;
 		};
 	};
 	class Connections

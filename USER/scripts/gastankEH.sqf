@@ -4,6 +4,9 @@ params ["_logic"];
 
 private _gasTank = nearestObject [getPos _logic,"Land_dp_bigTank_F"];
 
+if (isNil "orp_gasTanks") then {orp_gasTanks = []};
+orp_gasTanks pushBack _gasTank;
+
 _gasTank addEventHandler ["Killed",{
     params ["_gasTank"];
 
