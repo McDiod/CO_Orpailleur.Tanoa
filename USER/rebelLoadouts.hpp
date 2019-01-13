@@ -133,8 +133,8 @@ class orp_rebels {
             primaryWeapon = "";	
 			primaryWeaponMagazine = "";
 			addItemsToVest[] = {
-                LIST_6("rhsusf_mag_7x45acp_MHP"),
-			}
+                LIST_6("rhsusf_mag_7x45acp_MHP")
+			};
             class Rank {
                 class PRIVATE {
                     GRAD_FACTIONS_MEDICITEMS_CFR
@@ -176,8 +176,8 @@ class orp_rebels {
             primaryWeapon = "";	
 			primaryWeaponMagazine = "";
 			addItemsToVest[] = {
-                LIST_6("rhsusf_mag_7x45acp_MHP"),
-			}
+                LIST_6("rhsusf_mag_7x45acp_MHP")
+			};
 			
 
         };
