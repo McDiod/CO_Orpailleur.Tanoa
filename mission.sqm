@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2295;
+		nextID=2319;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=732;
+		nextID=762;
 	};
 	class Camera
 	{
-		pos[]={7265.4878,238.16902,8301.0508};
-		dir[]={0.44575807,-0.61937416,0.64640886};
-		up[]={0.35164717,0.78504908,0.50993639};
-		aside[]={0.82330734,9.7841257e-007,-0.56774777};
+		pos[]={11208.145,370.97467,8682.3037};
+		dir[]={-0.1362825,-0.48880038,0.86169213};
+		up[]={-0.076357931,0.87239343,0.48279968};
+		aside[]={0.9877277,4.8836228e-008,0.15621641};
 	};
 };
 binarizationWanted=0;
@@ -3490,7 +3490,7 @@ class Mission
 			name="Template: Spielereinheiten";
 			class Entities
 			{
-				items=18;
+				items=30;
 				class Item0
 				{
 					dataType="Logic";
@@ -6247,9 +6247,895 @@ class Mission
 					};
 					id=1575;
 				};
+				class Item18
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11202.688,367.00076,8691.457};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2296;
+							type="I_soldier_F";
+							atlOffset=3.0517578e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2295;
+					atlOffset=3.0517578e-005;
+				};
+				class Item19
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11203.518,366.8476,8691.917};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2298;
+							type="I_soldier_F";
+							atlOffset=3.0517578e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2297;
+					atlOffset=3.0517578e-005;
+				};
+				class Item20
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11204.104,366.7421,8692.5596};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2300;
+							type="I_soldier_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2299;
+				};
+				class Item21
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11204.588,366.57956,8693.0664};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2302;
+							type="I_soldier_F";
+							atlOffset=3.0517578e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2301;
+					atlOffset=3.0517578e-005;
+				};
+				class Item22
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11205.172,366.43503,8693.4951};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2304;
+							type="I_soldier_F";
+							atlOffset=3.0517578e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2303;
+					atlOffset=3.0517578e-005;
+				};
+				class Item23
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11205.968,366.22369,8694.3711};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2306;
+							type="I_soldier_F";
+							atlOffset=3.0517578e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2305;
+					atlOffset=3.0517578e-005;
+				};
+				class Item24
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11203.499,366.83301,8690.5596};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2308;
+							type="I_soldier_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2307;
+				};
+				class Item25
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11204.329,366.67969,8691.0195};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2310;
+							type="I_soldier_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2309;
+				};
+				class Item26
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11204.915,366.57578,8691.6621};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2312;
+							type="I_soldier_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2311;
+				};
+				class Item27
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11205.399,366.54449,8692.1689};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2314;
+							type="I_soldier_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2313;
+				};
+				class Item28
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11205.983,366.43439,8692.5977};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2316;
+							type="I_soldier_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2315;
+				};
+				class Item29
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11206.779,366.22318,8693.4736};
+								angles[]={0,2.475121,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								description="Reserverebell";
+								isPlayable=1;
+							};
+							id=2318;
+							type="I_soldier_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.94999999;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=2317;
+				};
 			};
 			id=729;
-			atlOffset=-3.0497437;
+			atlOffset=-0.016998291;
 		};
 		class Item2
 		{
@@ -9873,7 +10759,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={2025.8621,13.45,13141.447};
-			angle=0.87365931;
+			angle=0.87365919;
 			class Attributes
 			{
 				condition="call{true}";
