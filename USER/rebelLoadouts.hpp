@@ -128,7 +128,7 @@ class orp_rebels {
 			"U_BG_Guerilla2_2"
 			};
             headgear = "H_Bandanna_camo";
-            backpack = "ga_dlc_low_messenger_olive_medic";
+            backpack = "B_FieldPack_khk";
             handgunWeapon = "rhsusf_weap_m1911a1";
 			handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
             primaryWeapon = "";
@@ -144,7 +144,8 @@ class orp_rebels {
                 LIST_20("ACE_quikclot"),
                 LIST_15("ACE_tourniquet"),
                 LIST_20("ACE_morphine"),
-                LIST_20("ACE_epinephrine")
+                LIST_20("ACE_epinephrine"),
+				"GRAD_ALK"
             };
         };
 
