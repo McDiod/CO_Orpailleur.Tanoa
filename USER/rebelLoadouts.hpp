@@ -136,20 +136,15 @@ class orp_rebels {
 			addItemsToVest[] = {
                 LIST_6("rhsusf_mag_7x45acp_MHP")
 			};
-            class Rank {
-                class PRIVATE {
-                    GRAD_FACTIONS_MEDICITEMS_CFR
-                };
-                class CORPORAL {
-                    GRAD_FACTIONS_MEDICITEMS_SQ
-                };
-                class SERGEANT {
-                    GRAD_FACTIONS_MEDICITEMS_PT
-                };
-                class LIEUTENANT: SERGEANT {};
-                class CAPTAIN: SERGEANT {};
-                class MAJOR: SERGEANT {};
-                class COLONEL: SERGEANT {};
+            addItemsToBackpack[] = {
+                LIST_2("ACE_salineIV"),
+                LIST_10("ACE_salineIV_500"),
+                LIST_20("ACE_elasticBandage"),
+                LIST_20("ACE_packingBandage"),
+                LIST_20("ACE_quikclot"),
+                LIST_15("ACE_tourniquet"),
+                LIST_20("ACE_morphine"),
+                LIST_20("ACE_epinephrine")
             };
         };
 
