@@ -68,7 +68,7 @@ class securite {
 		class Soldier_F: Survivor_F {
 			primaryWeapon = "arifle_AKS_F";
 			primaryWeaponMagazine = "30Rnd_545x39_Mag_F";
-			uniform = "U_C_IDAP_Man_cargo_F";
+			uniform = "U_B_GEN_Commander_F";
 			vest = "V_TacVest_gen_F";
 			backpack = "";
 			headgear = "";
