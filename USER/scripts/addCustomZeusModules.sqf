@@ -17,3 +17,12 @@ private _categoryName = "ORPAILLEUR";
         [[false],"USER\scripts\startConvoy.sqf"] remoteExec ["execVM",2,false];
     }
 ] call Ares_fnc_RegisterCustomModule;
+
+[
+    _categoryName,
+    "Kraftwerk KI aktivieren",
+    {
+        orp_powerPlantDisabled = false;
+        publicVariable "orp_powerPlantDisabled";
+    }
+] call Ares_fnc_RegisterCustomModule;
