@@ -42,6 +42,7 @@ private _fnc_cutScene = {
     };
 
     [_unit,_unit] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+    [_unit, false, 10e10, true] call ace_medical_fnc_setUnconscious;
     _unit allowDamage false;
 
     if (isNull _chair) then {
